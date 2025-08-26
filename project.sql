@@ -35,11 +35,13 @@ FROM topten
 LEFT JOIN skills_job_dim ON topten.job_id = skills_job_dim.job_id
 LEFT JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 GROUP BY skills, type
+HAVING 
+    skills IS NOT NULL AND
+    count(skills) > 1
 ORDER BY demand_skills DESC;
 
 -- Most demand skills for Data Analyst
 SELECT
-    skills_job_dim.skill_id,
     skills,
     count(skills) AS demand_skills 
 FROM job_postings_fact
@@ -55,15 +57,18 @@ LIMIT 5;
 --Top skills based on salary
 SELECT
     skills,
+    type,
     round(avg(salary_year_avg),0) as avg_salary
 FROM job_postings_fact
 LEFT JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
 LEFT JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
     salary_year_avg IS NOT NULL AND
+    skills IS NOT NULL AND
     job_title_short = 'Data Analyst'
-GROUP BY skills
-ORDER BY avg_salary DESC;
+GROUP BY skills, type
+ORDER BY avg_salary DESC
+LIMIT 10;
 
 -- Most demand skills and with highest salary
 SELECT
@@ -75,12 +80,11 @@ LEFT JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
 LEFT JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
     salary_year_avg IS NOT NULL AND
-    job_title_short = 'Data Analyst' AND
-    job_work_from_home = TRUE
+    job_title_short = 'Data Analyst'
 GROUP BY skills
 HAVING
     count(skills) >10
 ORDER BY
     avg_salary DESC,
     demand_skills DESC
-LIMIT 25;
+LIMIT 15;
