@@ -147,6 +147,8 @@ LIMIT 10;
 
 <center>
 
+Results
+
 |   Skills  |     Type    | Average Salary (USD) |
 |:--------------:|:----------------:|:-------------------------:|
 | SVN            | Other            | 400,000                   |
@@ -162,7 +164,7 @@ LIMIT 10;
 
 </center>
 
-Table of the top 5 paid skills in data analyst job postings.
+Table of the top 10 paid skills in data analyst job postings.
 
 Skills like SVN, Solidity, and Couchbase lead with the highest salaries, showing strong demand for niche tools and programming expertise. Machine learning libraries, cloud platforms, and DevOps tools like MXNet, VMware, and Terraform also offer competitive pay, highlighting the value of technical depth and infrastructure knowledge in analytics roles.
 
