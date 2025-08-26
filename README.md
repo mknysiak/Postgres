@@ -47,6 +47,42 @@ Overview of the top Data Analyst roles in 2023:
 - Range of Employers: High-paying opportunities are offered by organizations such as SmartAsset, Meta, and AT&T, illustrating demand across multiple sectors.
 - Role Diversity: Job titles vary widely, from Data Analyst to Director of Analytics, underscoring the breadth of responsibilities and specializations within the field.
 
+![Top Paying Roles](images\top10.png)
+*Bar graph visualizing the salary for the top 10 salaries for data analysts which has been created via Google Colab based on SQL query results.*
+
+### 2. Skills for Top Paying Jobs
+To identify the key competencies demanded by high-paying positions, I merged job listing information with skill datasets, uncovering what qualifications employers prioritize for lucrative roles and what kind of skill this is.
+
+```sql
+WITH topten AS(
+SELECT *
+FROM job_postings_fact
+WHERE job_title_short = 'Data Analyst'AND
+    salary_year_avg IS NOT NULL AND
+    (job_location = 'Anywhere' OR job_location = 'Poland')
+ORDER BY salary_year_avg DESC
+LIMIT 10
+)
+
+SELECT
+    skills,
+    type,
+    count(skills) AS demand_skills
+FROM topten
+LEFT JOIN skills_job_dim ON topten.job_id = skills_job_dim.job_id
+LEFT JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+GROUP BY skills, type
+ORDER BY demand_skills DESC;
+```
+
+Among the top 10 best-paying data analyst roles in 2023, certain skills consistently stand out:
+- SQL takes the top spot, appearing in 8 of the listings.
+- Python is a close second, featured in 7 roles.
+- Tableau ranks high as well, showing up in 6 positions.
+
+Additional tools and languages such as R, Snowflake, Pandas, and Excel also make appearances, though with less frequency—indicating a more specialized or situational demand.
+
+This bar chart illustrates the frequency of key skills across the top 10 highest-paying data analyst roles. It was created in Google Colab using SQL query results.
 
 # Conclusion
 
