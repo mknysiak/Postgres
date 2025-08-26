@@ -111,7 +111,7 @@ Top Skills in Demand for Data Analysts (2023)
 - Core Tools Still Reign: SQL and Excel continue to be indispensable, underscoring the value of solid fundamentals in data wrangling and spreadsheet mastery.
 - Tech-Driven Insights: Proficiency in Python, Tableau, and Power BI is increasingly vital, reflecting the growing emphasis on technical fluency for crafting compelling visual narratives and guiding strategic decisions.
 
-<center>
+<p align="center">
 
 | Skills | Demand Count |
 | :----: | :----------: |
@@ -121,7 +121,7 @@ Top Skills in Demand for Data Analysts (2023)
 | Tableu   | 3745       |
 | Power BI | 2609       |
 
-</center>
+</p>
 
 Table of the demand for the top 5 skills in data analyst job postings.
 
@@ -145,7 +145,7 @@ ORDER BY avg_salary DESC
 LIMIT 10;
 ```
 
-<center>
+<p align="center">
 
 Results
 
@@ -162,7 +162,7 @@ Results
 | Terraform      | Other            | 146,734                   |
 | Twilio         | Sync             | 138,500                   |
 
-</center>
+</p>
 
 Table of the top 10 paid skills in data analyst job postings.
 
@@ -191,7 +191,7 @@ ORDER BY
 LIMIT 15;
 ```
 
-<center>
+<p align="center">
 
 Results
 
@@ -213,7 +213,7 @@ Results
 | Spark          | 113,002                  | 187              |
 | Splunk         | 112,928                  | 15               |
 
-</center>
+</p>
 
 Table of the most optimal skills for data analyst sorted by salary.
 
