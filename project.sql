@@ -1,7 +1,6 @@
 -- Top 10 Data Analyst jobs
 SELECT
     name,
-    job_id,
     job_title_short,
     job_title,
     job_location,
