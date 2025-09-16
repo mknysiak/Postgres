@@ -48,7 +48,7 @@ Overview of the top Data Analyst roles in 2023:
 - Role Diversity: Job titles vary widely, from Data Analyst to Director of Analytics, underscoring the breadth of responsibilities and specializations within the field.
 
 ![Top Paying Roles](images/top10.png)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts which has been created via Google Colab based on SQL query results.*
+*Bar graph visualizing the salary for the top 10 salaries for data analysts which has been created via Google Colab based on SQL query results*
 
 ### 2. Skills for Top Paying Jobs
 🛠️To identify the key competencies demanded by high-paying positions, I merged job listing information with skill datasets, uncovering what qualifications employers prioritize for lucrative roles and what kind of skill this is.
@@ -123,7 +123,7 @@ Top Skills in Demand for Data Analysts (2023)
 
 </p>
 
-Table of the demand for the top 5 skills in data analyst job postings.
+*Table of the demand for the top 5 skills in data analyst job postings*
 
 ### 4. Top 10 Skills Based on Salary
 🔍Analyzing average salaries across skill sets uncovered which competencies command the highest pay—offering clear insight into where the financial value lies.
@@ -164,7 +164,7 @@ Results
 
 </p>
 
-Table of the top 10 paid skills in data analyst job postings.
+*Table of the top 10 paid skills in data analyst job postings*
 
 Skills like SVN, Solidity, and Couchbase lead with the highest salaries, showing strong demand for niche tools and programming expertise. Machine learning libraries, cloud platforms, and DevOps tools like MXNet, VMware, and Terraform also offer competitive pay, highlighting the value of technical depth and infrastructure knowledge in analytics roles.
 
@@ -215,7 +215,7 @@ Results
 
 </p>
 
-Table of the most optimal skills for data analyst sorted by salary.
+*Table of the most optimal skills for data analyst sorted by salary*
 
 This dataset highlights skills that offer competitive salaries despite moderate demand. Technologies like Kafka, PyTorch, and Perl stand out with average salaries above $120K, even though their demand counts are relatively low. Tools such as Airflow, Spark, and GCP show a healthier balance between demand and pay, making them strategic choices for analysts aiming to maximize both marketability and compensation.
 
